@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'xycph7n&0#@f55%mu)h)7w%()a7w22=!)-tnll74mvdx15qjoa'
+SECRET_KEY = 'ggq#!onrbo(+!ei-!ue*jpd8(iu#0_tg#)408yp4%1ty*oxf=1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'merhi'
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +56,9 @@ ROOT_URLCONF = 'merhi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'react/build')
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -130,6 +132,7 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:8080',
 ]
 
+
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'mainfeed/build/static')
+    os.path.join(BASE_DIR, 'react/build/static')
 ]

@@ -4,8 +4,8 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework.response import Response
 
-from merhi.models import File
-from merhi.serializers import FileSerializer
+from api.models import File
+from api.serializers import FileSerializer
 
 from rest_framework.parsers import MultiPartParser
 from rest_framework.response import Response
