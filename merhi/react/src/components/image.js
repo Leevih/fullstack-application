@@ -1,13 +1,14 @@
 import React from 'react'
 
 const Image = (props) => {
-    const { content } = props
+    const { content, width } = props
 
     return(
         <div>
             {content.title}
-         <img src={content.image}    
-            style={{maxWidth: "200px",}}/>
+            <img src={content.data}
+            style={{maxWidth: width*20}}    
+            />
         </div>
     )
 }

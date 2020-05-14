@@ -3,10 +3,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, connect } from 'react-redux'
 
 import main_service from './services/main_service'
-
 import { fecthImages } from './actions/image.action'
-
-import Image from './components/image'
+import ImageGrid from './components/ImageGrid';
 
 const App = (props) => {
 const dispatch = useDispatch()
@@ -17,7 +15,8 @@ const { images } = props
   }, [])
   return (
     <div>
-      {images && images.map(item => <Image content={item} />)}
+     {/*  <ImageView /> */}
+      {images ? <ImageGrid images={images}/> : <h1>)</h1>}
     </div>
   );
 }
